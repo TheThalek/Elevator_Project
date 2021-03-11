@@ -5,10 +5,9 @@
 
 #include "initialize.h"
 #include "hardware.h"
-#include "move.h"
-#include "stop.h"
-#include "wait.h"
-
+#include "state.h"
+#include "queue.h"
+#include "timer.h"
 
 
 
@@ -19,25 +18,35 @@ int main() {
         fprintf(stderr, "Unable to initialize hardware\n");
         exit(1);
     }
+
+    initialize();
     
-    printf("=== Example Program ===\n");
-    printf("Press the stop button on the elevator panel to exit\n");
-
-
-
+    open_door();
+    start_timer();
 
 
     while(1) {
-
-         if(hardware_read_stop_signal()){
+        if(hardware_read_stop_signal()){
             hardware_command_movement(HARDWARE_MOVEMENT_STOP);
             break;
-          }
+        }
+
+        //enum State current_state = Idle;
 
 
-        
-        initialize();
+        // switch(current_state) {
+        //     case(Idle):
+        //         state_idle();
+        //     case(Wait):
+        //         state_wait();
+
+        //     case(Stop):
+        //         state_stop();
+        //     case(Move):
+        //         state_move();
+        // }
     }
+
 
 
     // while(1){

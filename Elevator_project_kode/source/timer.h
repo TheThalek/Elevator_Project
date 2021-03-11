@@ -5,6 +5,7 @@
 
 
 #include <time.h>
+#include <stdbool.h>
 
 #ifndef __TIMER_DOT_H__
 #define __TIMER_DOT_H__
@@ -16,6 +17,6 @@ void start_timer();
 /** @brief Function that implements the 3 seconds countdown.
  * @return countdown executed (0). countdown ongoing (1)
 */ 
-int timer_countdown();
+bool timer_countdown();
 
 #endif

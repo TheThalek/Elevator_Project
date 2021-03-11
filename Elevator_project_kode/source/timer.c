@@ -1,21 +1,22 @@
 #include <time.h>
 #include <stdlib.h>
 #include "timer.h"
+#include <stdbool.h>
 
 #define TIME_LIMIT 3
 
-static int set_timer = -1;
+static time_t set_timer = -1; //Endre til nøyaktig variabel
 
 void start_timer(){
     set_timer = time(NULL);
 }
 
-int timer_countdown(){
+bool timer_countdown(){
     if(set_timer == -1){
         return 0;
     }
     else{
-        return (time(NULL) - set_timer > TIME_LIMIT);
+        return ((time(NULL) - set_timer) > TIME_LIMIT);
     }
 }
 
