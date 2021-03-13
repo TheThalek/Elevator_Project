@@ -3,12 +3,11 @@
  * @brief Implementation of timer on the elevator door 
  */
 
-
-#include <time.h>
-#include <stdbool.h>
-
 #ifndef __TIMER_DOT_H__
 #define __TIMER_DOT_H__
+
+#include <stdbool.h>
+#include <time.h>
 
 /** @brief Start timer
 */

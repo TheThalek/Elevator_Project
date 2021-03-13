@@ -8,8 +8,7 @@
 #include "state.h"
 #include "queue.h"
 #include "timer.h"
-
-
+#include "orders.h"
 
 
 int main() {
@@ -21,35 +20,17 @@ int main() {
 
     initialize();
     
-    open_door();
-    start_timer();
-
-
-    while(1) {
-        if(hardware_read_stop_signal()){
-            hardware_command_movement(HARDWARE_MOVEMENT_STOP);
-            break;
-        }
-
-        //enum State current_state = Idle;
-
-
-        // switch(current_state) {
-        //     case(Idle):
-        //         state_idle();
-        //     case(Wait):
-        //         state_wait();
-
-        //     case(Stop):
-        //         state_stop();
-        //     case(Move):
-        //         state_move();
-        // }
-    }
+    state_run();
+    return 0;
+}
 
 
 
-    // while(1){
+
+
+
+
+// while(1){
     //     if(hardware_read_stop_signal()){
     //         hardware_command_movement(HARDWARE_MOVEMENT_STOP);
     //         break;
@@ -99,6 +80,3 @@ int main() {
     //         hardware_command_stop_light(0);
     //     }
     // }
-
-    return 0;
-}

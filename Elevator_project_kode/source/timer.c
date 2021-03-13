@@ -1,7 +1,5 @@
-#include <time.h>
-#include <stdlib.h>
 #include "timer.h"
-#include <stdbool.h>
+
 
 #define TIME_LIMIT 3
 
