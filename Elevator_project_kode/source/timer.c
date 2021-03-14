@@ -3,7 +3,8 @@
 
 #define TIME_LIMIT 3
 
-static time_t set_timer = -1; //Endre til nøyaktig variabel
+//TRENGER BEDRE TIMER!!!!!!!
+static time_t set_timer = -1; 
 
 void start_timer(){
     set_timer = time(NULL);

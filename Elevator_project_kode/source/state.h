@@ -9,7 +9,7 @@
 #include "queue.h"
 #include <stdbool.h>
 
-typedef enum State {Idle, Move, Wait, Stop} state;
+typedef enum State {Idle, Move, Wait, StopFloor, StopShaft} state;
 
 void state_idle();
 

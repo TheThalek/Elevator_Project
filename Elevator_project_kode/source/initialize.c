@@ -7,7 +7,7 @@
 void initialize() {
     bool at_floor = 0;
     while (!at_floor) {
-        for (int i = 0; i < HARDWARE_NUMBER_OF_FLOORS-1; i++) {
+        for (int i = 0; i < (HARDWARE_NUMBER_OF_FLOORS); i++) {
             at_floor += hardware_read_floor_sensor(i);
         }    
         if (!at_floor) {
@@ -15,8 +15,8 @@ void initialize() {
         }
     }
     hardware_command_movement(HARDWARE_MOVEMENT_STOP);
+    initialize_order_list();
     clear_all_order_lights();
-    clear_all_orders();
 };
 
 

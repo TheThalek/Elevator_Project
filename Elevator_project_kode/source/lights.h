@@ -10,6 +10,7 @@
 
 
 #include "hardware.h"
+#include "orders.h"
 
 /**
  * @brief Function that clears all the order lights (Up, Down and Inside elevator, in every floor)

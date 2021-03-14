@@ -19,9 +19,6 @@ void clear_all_order_lights(){
 
 // Order lights (UP, DOWN, INTERNAL)
 void set_order_lights() {
-    
-
-
         for(int f = 0; f < HARDWARE_NUMBER_OF_FLOORS; f++){
             /* Internal orders */
             if(hardware_read_order(f, HARDWARE_ORDER_INSIDE)){
@@ -42,13 +39,11 @@ void set_order_lights() {
 
 
 
-
-// Indicate which floor we're on. Floor = 1, light 1 = on, etc. It stays on until elevator reaches next floor
-void set_floor_lights(int floor){
-    
+void clear_order_lights(int floor){
+    for (int button = 0; button < HARDWARE_NUMBER_OF_BUTTONS; button++) {
+        hardware_command_order_light(floor, get_hardwareorder(button) , 0);
+    }
 }
-
-
 
 
 
