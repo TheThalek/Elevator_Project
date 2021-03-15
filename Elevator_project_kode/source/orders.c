@@ -87,9 +87,19 @@ int check_order_floor(int floor) {
     return 0;
 }
 
+int check_all_order(){
+    for (int floor = 0; floor < HARDWARE_NUMBER_OF_FLOORS; floor++){
+        if (check_order_floor(floor) == 1){
+            return 1;
+        }
+    }
+    return 0;
+}
+
+
 
 int check_order_above() {
-    for(int floor = get_last_position(); floor < HARDWARE_NUMBER_OF_FLOORS; floor++){
+    for(int floor = (get_last_position()+1); floor < HARDWARE_NUMBER_OF_FLOORS; floor++){
         if(check_order_floor(floor)==1) {
             return 1;
         }
@@ -99,6 +109,16 @@ int check_order_above() {
 
 
 int check_order_below() {
+    for(int floor = 0; floor <= get_last_position(); floor++){
+        if(check_order_floor(floor)==1) {
+            return 1;
+        }
+    }
+    return 0;
+}
+
+
+int check_order_below_except_current_floor() {
     for(int floor = 0; floor < get_last_position(); floor++){
         if(check_order_floor(floor)==1) {
             return 1;
@@ -109,8 +129,13 @@ int check_order_below() {
 
 
 
-
-
+int find_floor_with_order() {
+    for(int floor = 0; floor < HARDWARE_NUMBER_OF_FLOORS; floor++) {
+        if(check_order_floor(floor)) {
+            return floor;
+        }
+    }
+}
 
 
 

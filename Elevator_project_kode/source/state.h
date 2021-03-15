@@ -11,6 +11,8 @@
 
 typedef enum State {Idle, Move, Wait, StopFloor, StopShaft} state;
 
+void state_init();
+
 void state_idle();
 
 void state_wait();

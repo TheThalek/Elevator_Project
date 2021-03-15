@@ -48,8 +48,11 @@ void clear_order_lights(int floor){
 
 
 // Light is on as long as door is open
-void set_stop_light(){
-
+void on_stop_light(){
+    hardware_command_stop_light(1);
 }
 
+void off_stop_light(){
+    hardware_command_stop_light(0);
+}
 

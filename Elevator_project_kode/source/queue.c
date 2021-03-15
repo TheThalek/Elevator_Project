@@ -59,5 +59,26 @@ int get_current_direction() {
 
 
 
-
+int find_direction_when_stop() {
+    printf("Im looking for the right direction \n");
+    int new_floor = find_floor_with_order();
+    if(last_position > new_floor) {
+        printf("Setting new directin = -1 \n");
+        return (-1);
+    }
+    else if(last_position < new_floor) {
+        printf("Setting new directin = 1 \n");
+        return 1;
+    }
+    else if(last_position == new_floor){
+        if(current_direction == (-1)) {
+            printf("Setting new directin = -1 \n");
+            return 1;
+        }
+        else if(current_direction == 1) {
+            printf("Setting new directin = -1 \n");
+            return (-1);
+        }
+    }
+}
 

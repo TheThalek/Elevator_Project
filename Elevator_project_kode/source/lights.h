@@ -15,12 +15,13 @@
 /**
  * @brief Function that clears all the order lights (Up, Down and Inside elevator, in every floor)
 */
-void clear_all_order_lights();
+void clear_order_lights();
 
 
 
 void set_lights();
-
+void on_stop_light();
+void off_stop_light();
 
 
 #endif
