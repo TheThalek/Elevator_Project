@@ -28,44 +28,194 @@ This graph shows which files directly or indirectly include this file\+:
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{queue_8h_ab6d5385762b69dab12732efd71fb09cd}\label{queue_8h_ab6d5385762b69dab12732efd71fb09cd}} 
-int {\bfseries current\+\_\+position} ()
-\item 
+int \hyperlink{queue_8h_ab6d5385762b69dab12732efd71fb09cd}{current\+\_\+position} ()
+\begin{DoxyCompactList}\small\item\em Finds the current position. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{queue_8h_a178e558cfd6872984c2d29792a508e9b}\label{queue_8h_a178e558cfd6872984c2d29792a508e9b}} 
-void {\bfseries set\+\_\+last\+\_\+position} ()
-\item 
-\mbox{\Hypertarget{queue_8h_a27076904adf2475044d85701f2facc27}\label{queue_8h_a27076904adf2475044d85701f2facc27}} 
-int {\bfseries get\+\_\+last\+\_\+position} ()
-\item 
-\mbox{\Hypertarget{queue_8h_acf6f3f01ccc5d2cc5678499e4a992400}\label{queue_8h_acf6f3f01ccc5d2cc5678499e4a992400}} 
-void {\bfseries set\+\_\+current\+\_\+direction} (int direction)
-\item 
-\mbox{\Hypertarget{queue_8h_af7aa9046b156b74a3b2aebd620fc3e72}\label{queue_8h_af7aa9046b156b74a3b2aebd620fc3e72}} 
-void {\bfseries set\+\_\+start\+\_\+direction} (int new\+\_\+floor)
-\item 
-\mbox{\Hypertarget{queue_8h_ac426009b9dd5bd9bc76949a454a320a6}\label{queue_8h_ac426009b9dd5bd9bc76949a454a320a6}} 
-int {\bfseries get\+\_\+current\+\_\+direction} ()
-\item 
-\mbox{\Hypertarget{queue_8h_ac299892189fe5e25366c96583ce71110}\label{queue_8h_ac299892189fe5e25366c96583ce71110}} 
-int {\bfseries find\+\_\+direction\+\_\+when\+\_\+stop} ()
-\item 
-\mbox{\Hypertarget{queue_8h_aa7ed6c09f3841bf8eff8018173a95c1a}\label{queue_8h_aa7ed6c09f3841bf8eff8018173a95c1a}} 
-int {\bfseries check\+\_\+priority\+\_\+up} ()
-\item 
-\mbox{\Hypertarget{queue_8h_ab08043d789b16601723fdac11bdf827c}\label{queue_8h_ab08043d789b16601723fdac11bdf827c}} 
-void {\bfseries movement\+\_\+up} ()
-\item 
-\mbox{\Hypertarget{queue_8h_a8738e0662c2d336c7573829c9be0e44c}\label{queue_8h_a8738e0662c2d336c7573829c9be0e44c}} 
-int {\bfseries check\+\_\+priority\+\_\+down} ()
-\item 
+void \hyperlink{queue_8h_a178e558cfd6872984c2d29792a508e9b}{set\+\_\+last\+\_\+position} ()
+\begin{DoxyCompactList}\small\item\em The last\+\_\+position variable is updated When the elevator moves to a defined floor, last\+\_\+position = \hyperlink{queue_8h_ab6d5385762b69dab12732efd71fb09cd}{current\+\_\+position()} \end{DoxyCompactList}\item 
+int \hyperlink{queue_8h_a27076904adf2475044d85701f2facc27}{get\+\_\+last\+\_\+position} ()
+\begin{DoxyCompactList}\small\item\em Returns last\+\_\+position. \end{DoxyCompactList}\item 
+void \hyperlink{queue_8h_acf6f3f01ccc5d2cc5678499e4a992400}{set\+\_\+current\+\_\+direction} (int direction)
+\begin{DoxyCompactList}\small\item\em Changes current\+\_\+direction to direction. \end{DoxyCompactList}\item 
+void \hyperlink{queue_8h_af7aa9046b156b74a3b2aebd620fc3e72}{set\+\_\+start\+\_\+direction} (int new\+\_\+floor)
+\begin{DoxyCompactList}\small\item\em Chooses the starting direction, when order is placed in idle. \end{DoxyCompactList}\item 
+int \hyperlink{queue_8h_ac426009b9dd5bd9bc76949a454a320a6}{get\+\_\+current\+\_\+direction} ()
+\begin{DoxyCompactList}\small\item\em Returns current\+\_\+direction. \end{DoxyCompactList}\item 
+int \hyperlink{queue_8h_ac299892189fe5e25366c96583ce71110}{find\+\_\+direction\+\_\+when\+\_\+stop} ()
+\begin{DoxyCompactList}\small\item\em Decides te new direction, when order is placed in state Stop\+Shaft. Uses new\+\_\+floor and last\+\_\+position to decide which floors the elevator is located between. Chooses the direction based on this. \end{DoxyCompactList}\item 
+int \hyperlink{queue_8h_aa7ed6c09f3841bf8eff8018173a95c1a}{check\+\_\+priority\+\_\+up} ()
+\begin{DoxyCompactList}\small\item\em Decide if Down-\/orders should be ignored when movement is Up. \end{DoxyCompactList}\item 
+void \hyperlink{queue_8h_ab08043d789b16601723fdac11bdf827c}{movement\+\_\+up} ()
+\begin{DoxyCompactList}\small\item\em Decides if the elevator should stop, continue up or change direction. Moves up until elevator reaches floor with order. Stops, clear orders on floor and lights. Set timer. Checks if there are more orders above. If yes, continues up. If not, checks if there are more orders below. If yes, changes direction down. Otherwise, changes state to Idle. \end{DoxyCompactList}\item 
+int \hyperlink{queue_8h_a8738e0662c2d336c7573829c9be0e44c}{check\+\_\+priority\+\_\+down} ()
+\begin{DoxyCompactList}\small\item\em Decide if Up-\/orders should be ignored when movement is Down. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{queue_8h_acb3c47304ad272e106be094200689350}\label{queue_8h_acb3c47304ad272e106be094200689350}} 
-void {\bfseries movement\+\_\+down} ()
-\item 
+void \hyperlink{queue_8h_acb3c47304ad272e106be094200689350}{movement\+\_\+down} ()
+\begin{DoxyCompactList}\small\item\em Decides if the elevator should stop, continue up or change direction. Moves down until elevator reaches floor with order. Stops, clear orders on floor and lights. Set timer. Checks if there are more orders below. If yes, continues down. If not, checks if there are more orders above. If yes, changes direction up. Otherwise, changes state to Idle. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{queue_8h_a05f4d4ebc3e0b18fc70f3902771cce28}\label{queue_8h_a05f4d4ebc3e0b18fc70f3902771cce28}} 
-void {\bfseries queue\+\_\+manager} ()
-\end{DoxyCompactItemize}
+void \hyperlink{queue_8h_a05f4d4ebc3e0b18fc70f3902771cce28}{queue\+\_\+manager} ()
+\begin{DoxyCompactList}\small\item\em Decides queue based on current\+\_\+direction. If the direction is up, calls \hyperlink{queue_8h_ab08043d789b16601723fdac11bdf827c}{movement\+\_\+up()}, if direction is down, calls \hyperlink{queue_8h_acb3c47304ad272e106be094200689350}{movement\+\_\+down()}. If the order is on current floor, stays on current floor, change state to Wait after set\+\_\+timer(). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Library for the implementation of queue. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{queue_8h_a8738e0662c2d336c7573829c9be0e44c}\label{queue_8h_a8738e0662c2d336c7573829c9be0e44c}} 
+\index{queue.\+h@{queue.\+h}!check\+\_\+priority\+\_\+down@{check\+\_\+priority\+\_\+down}}
+\index{check\+\_\+priority\+\_\+down@{check\+\_\+priority\+\_\+down}!queue.\+h@{queue.\+h}}
+\subsubsection{\texorpdfstring{check\+\_\+priority\+\_\+down()}{check\_priority\_down()}}
+{\footnotesize\ttfamily int check\+\_\+priority\+\_\+down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Decide if Up-\/orders should be ignored when movement is Down. 
+
+\begin{DoxyReturn}{Returns}
+1 if it should be ignored, 0 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 105 of file queue.\+c.
+
+\mbox{\Hypertarget{queue_8h_aa7ed6c09f3841bf8eff8018173a95c1a}\label{queue_8h_aa7ed6c09f3841bf8eff8018173a95c1a}} 
+\index{queue.\+h@{queue.\+h}!check\+\_\+priority\+\_\+up@{check\+\_\+priority\+\_\+up}}
+\index{check\+\_\+priority\+\_\+up@{check\+\_\+priority\+\_\+up}!queue.\+h@{queue.\+h}}
+\subsubsection{\texorpdfstring{check\+\_\+priority\+\_\+up()}{check\_priority\_up()}}
+{\footnotesize\ttfamily int check\+\_\+priority\+\_\+up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Decide if Down-\/orders should be ignored when movement is Up. 
+
+\begin{DoxyReturn}{Returns}
+1 if it should be ignored, 0 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file queue.\+c.
+
+\mbox{\Hypertarget{queue_8h_ab6d5385762b69dab12732efd71fb09cd}\label{queue_8h_ab6d5385762b69dab12732efd71fb09cd}} 
+\index{queue.\+h@{queue.\+h}!current\+\_\+position@{current\+\_\+position}}
+\index{current\+\_\+position@{current\+\_\+position}!queue.\+h@{queue.\+h}}
+\subsubsection{\texorpdfstring{current\+\_\+position()}{current\_position()}}
+{\footnotesize\ttfamily int current\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Finds the current position. 
+
+\begin{DoxyReturn}{Returns}
+-\/1, if in an undefined floor, the floor number if in a defined floor. 
+\end{DoxyReturn}
+
+
+Definition at line 6 of file queue.\+c.
+
+\mbox{\Hypertarget{queue_8h_ac299892189fe5e25366c96583ce71110}\label{queue_8h_ac299892189fe5e25366c96583ce71110}} 
+\index{queue.\+h@{queue.\+h}!find\+\_\+direction\+\_\+when\+\_\+stop@{find\+\_\+direction\+\_\+when\+\_\+stop}}
+\index{find\+\_\+direction\+\_\+when\+\_\+stop@{find\+\_\+direction\+\_\+when\+\_\+stop}!queue.\+h@{queue.\+h}}
+\subsubsection{\texorpdfstring{find\+\_\+direction\+\_\+when\+\_\+stop()}{find\_direction\_when\_stop()}}
+{\footnotesize\ttfamily int find\+\_\+direction\+\_\+when\+\_\+stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Decides te new direction, when order is placed in state Stop\+Shaft. Uses new\+\_\+floor and last\+\_\+position to decide which floors the elevator is located between. Chooses the direction based on this. 
+
+\begin{DoxyReturn}{Returns}
+-\/1 = direction down, 1 = direction up. 
+
+1 if unexpected event. 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file queue.\+c.
+
+\mbox{\Hypertarget{queue_8h_ac426009b9dd5bd9bc76949a454a320a6}\label{queue_8h_ac426009b9dd5bd9bc76949a454a320a6}} 
+\index{queue.\+h@{queue.\+h}!get\+\_\+current\+\_\+direction@{get\+\_\+current\+\_\+direction}}
+\index{get\+\_\+current\+\_\+direction@{get\+\_\+current\+\_\+direction}!queue.\+h@{queue.\+h}}
+\subsubsection{\texorpdfstring{get\+\_\+current\+\_\+direction()}{get\_current\_direction()}}
+{\footnotesize\ttfamily int get\+\_\+current\+\_\+direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns current\+\_\+direction. 
+
+\begin{DoxyReturn}{Returns}
+current\+\_\+direction 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file queue.\+c.
+
+\mbox{\Hypertarget{queue_8h_a27076904adf2475044d85701f2facc27}\label{queue_8h_a27076904adf2475044d85701f2facc27}} 
+\index{queue.\+h@{queue.\+h}!get\+\_\+last\+\_\+position@{get\+\_\+last\+\_\+position}}
+\index{get\+\_\+last\+\_\+position@{get\+\_\+last\+\_\+position}!queue.\+h@{queue.\+h}}
+\subsubsection{\texorpdfstring{get\+\_\+last\+\_\+position()}{get\_last\_position()}}
+{\footnotesize\ttfamily int get\+\_\+last\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns last\+\_\+position. 
+
+\begin{DoxyReturn}{Returns}
+last\+\_\+position 
+\end{DoxyReturn}
+
+
+Definition at line 24 of file queue.\+c.
+
+\mbox{\Hypertarget{queue_8h_ab08043d789b16601723fdac11bdf827c}\label{queue_8h_ab08043d789b16601723fdac11bdf827c}} 
+\index{queue.\+h@{queue.\+h}!movement\+\_\+up@{movement\+\_\+up}}
+\index{movement\+\_\+up@{movement\+\_\+up}!queue.\+h@{queue.\+h}}
+\subsubsection{\texorpdfstring{movement\+\_\+up()}{movement\_up()}}
+{\footnotesize\ttfamily void movement\+\_\+up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Decides if the elevator should stop, continue up or change direction. Moves up until elevator reaches floor with order. Stops, clear orders on floor and lights. Set timer. Checks if there are more orders above. If yes, continues up. If not, checks if there are more orders below. If yes, changes direction down. Otherwise, changes state to Idle. 
+
+
+
+Definition at line 77 of file queue.\+c.
+
+\mbox{\Hypertarget{queue_8h_acf6f3f01ccc5d2cc5678499e4a992400}\label{queue_8h_acf6f3f01ccc5d2cc5678499e4a992400}} 
+\index{queue.\+h@{queue.\+h}!set\+\_\+current\+\_\+direction@{set\+\_\+current\+\_\+direction}}
+\index{set\+\_\+current\+\_\+direction@{set\+\_\+current\+\_\+direction}!queue.\+h@{queue.\+h}}
+\subsubsection{\texorpdfstring{set\+\_\+current\+\_\+direction()}{set\_current\_direction()}}
+{\footnotesize\ttfamily void set\+\_\+current\+\_\+direction (\begin{DoxyParamCaption}\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+Changes current\+\_\+direction to direction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em direction} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file queue.\+c.
+
+\mbox{\Hypertarget{queue_8h_af7aa9046b156b74a3b2aebd620fc3e72}\label{queue_8h_af7aa9046b156b74a3b2aebd620fc3e72}} 
+\index{queue.\+h@{queue.\+h}!set\+\_\+start\+\_\+direction@{set\+\_\+start\+\_\+direction}}
+\index{set\+\_\+start\+\_\+direction@{set\+\_\+start\+\_\+direction}!queue.\+h@{queue.\+h}}
+\subsubsection{\texorpdfstring{set\+\_\+start\+\_\+direction()}{set\_start\_direction()}}
+{\footnotesize\ttfamily void set\+\_\+start\+\_\+direction (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+floor }\end{DoxyParamCaption})}
+
+
+
+Chooses the starting direction, when order is placed in idle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+floor} & The ordered floor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file queue.\+c.
 

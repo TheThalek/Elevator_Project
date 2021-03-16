@@ -111,57 +111,127 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ae3081d55e54214abe932e6c511d6cac2"><td class="memItemLeft" align="right" valign="top"><a id="ae3081d55e54214abe932e6c511d6cac2"></a>
-typedef enum State&#160;</td><td class="memItemRight" valign="bottom"><b>state</b></td></tr>
+typedef enum <a class="el" href="state_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#ae3081d55e54214abe932e6c511d6cac2">state</a></td></tr>
+<tr class="memdesc:ae3081d55e54214abe932e6c511d6cac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for the different states in the state machine. <br /></td></tr>
 <tr class="separator:ae3081d55e54214abe932e6c511d6cac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="memItemLeft" align="right" valign="top"><a id="a5d74787dedbc4e11c1ab15bf487e61f8"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>State</b> { <br />
-&#160;&#160;<b>Idle</b>, 
-<b>Move</b>, 
-<b>Wait</b>, 
-<b>StopFloor</b>, 
+<tr class="memitem:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> { <br />
+&#160;&#160;<a class="el" href="state_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8ad3fa9ae9431d6cb1772f9d9df48cab19">Idle</a>, 
+<a class="el" href="state_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8ac3e0a98cb8e17fd822ecd3166b1a3119">Move</a>, 
+<a class="el" href="state_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a9779a7e9f14b8a5b1d7640a1ff0dab26">Wait</a>, 
+<a class="el" href="state_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a3cd4c92c82b6251ce3c10eafa2012026">StopFloor</a>, 
 <br />
-&#160;&#160;<b>StopShaft</b>
+&#160;&#160;<a class="el" href="state_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a3ef1f303e67f0d5c573ed138d8a0b98e">StopShaft</a>
 <br />
- }</td></tr>
+ }<tr class="memdesc:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for the different states in the state machine.  <a href="state_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a599325382f137e0a8fc50af96783d302"><td class="memItemLeft" align="right" valign="top"><a id="a599325382f137e0a8fc50af96783d302"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_current_state</b> (state new_state)</td></tr>
+<tr class="memitem:a599325382f137e0a8fc50af96783d302"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#a599325382f137e0a8fc50af96783d302">set_current_state</a> (<a class="el" href="state_8h.html#ae3081d55e54214abe932e6c511d6cac2">state</a> new_state)</td></tr>
+<tr class="memdesc:a599325382f137e0a8fc50af96783d302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the variable current_state = new_state.  <a href="#a599325382f137e0a8fc50af96783d302">More...</a><br /></td></tr>
 <tr class="separator:a599325382f137e0a8fc50af96783d302"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcf4a6ddff16950f5c2792c5663ec1d7"><td class="memItemLeft" align="right" valign="top"><a id="afcf4a6ddff16950f5c2792c5663ec1d7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>state_init</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#afcf4a6ddff16950f5c2792c5663ec1d7">state_init</a> ()</td></tr>
+<tr class="memdesc:afcf4a6ddff16950f5c2792c5663ec1d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the elevator. If the elevator is in an undefined floor, when the program starts, it moves up until it reaches a defined floor. <br /></td></tr>
 <tr class="separator:afcf4a6ddff16950f5c2792c5663ec1d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f805cf1725a80c15652562f8785e989"><td class="memItemLeft" align="right" valign="top"><a id="a2f805cf1725a80c15652562f8785e989"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>read_stop_signal</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#a2f805cf1725a80c15652562f8785e989">read_stop_signal</a> ()</td></tr>
+<tr class="memdesc:a2f805cf1725a80c15652562f8785e989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the stop-signal button and determines the new state. If current_postion() is on undefined floor, current_state = StopShaft. If current_postion() is on defined floor, current_state = StopFloor. <br /></td></tr>
 <tr class="separator:a2f805cf1725a80c15652562f8785e989"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f042a2a46386e05be3f891b941edddd"><td class="memItemLeft" align="right" valign="top"><a id="a2f042a2a46386e05be3f891b941edddd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>state_idle</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#a2f042a2a46386e05be3f891b941edddd">state_idle</a> ()</td></tr>
+<tr class="memdesc:a2f042a2a46386e05be3f891b941edddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elevator stands still on defined floor with doors closed, Continuously look for new orders. If new order, sets start direction, before changing the state to Move. <br /></td></tr>
 <tr class="separator:a2f042a2a46386e05be3f891b941edddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05d3eebcf56bc02711aeb1c0cc0b138b"><td class="memItemLeft" align="right" valign="top"><a id="a05d3eebcf56bc02711aeb1c0cc0b138b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>state_wait</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#a05d3eebcf56bc02711aeb1c0cc0b138b">state_wait</a> ()</td></tr>
+<tr class="memdesc:a05d3eebcf56bc02711aeb1c0cc0b138b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the door, when the timer expires, closes door. If obstruction signal is active, the door stays open. If the timer expires when the current_direction = 0, the state goes to Idle. Otherwise it goes to Move. <br /></td></tr>
 <tr class="separator:a05d3eebcf56bc02711aeb1c0cc0b138b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae28b26b5324f3539a339420edf3d4e5f"><td class="memItemLeft" align="right" valign="top"><a id="ae28b26b5324f3539a339420edf3d4e5f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>state_stop_floor</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#ae28b26b5324f3539a339420edf3d4e5f">state_stop_floor</a> ()</td></tr>
+<tr class="memdesc:ae28b26b5324f3539a339420edf3d4e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop button is activated when the elevator is on defined floor. The stop light is turned on and the doors are opened. All pevious orders are cleared. When the stop-button is released the stop light turns off. The door closes after the timer is expired. <br /></td></tr>
 <tr class="separator:ae28b26b5324f3539a339420edf3d4e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfc94245b386b5517a8e2606a3bc4e35"><td class="memItemLeft" align="right" valign="top"><a id="acfc94245b386b5517a8e2606a3bc4e35"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>state_stop_shaft</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#acfc94245b386b5517a8e2606a3bc4e35">state_stop_shaft</a> ()</td></tr>
+<tr class="memdesc:acfc94245b386b5517a8e2606a3bc4e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop button is activated when the elevator is on undefined floor. The stop light is turned on. All previous orders are cleared. When the stop-button is released the stop light turns off and the elevator stands still until a new order is placed. A new direction is chosen. New state = move. <br /></td></tr>
 <tr class="separator:acfc94245b386b5517a8e2606a3bc4e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3046aa549824cbea195caec80e23f13f"><td class="memItemLeft" align="right" valign="top"><a id="a3046aa549824cbea195caec80e23f13f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>state_move</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#a3046aa549824cbea195caec80e23f13f">state_move</a> ()</td></tr>
+<tr class="memdesc:a3046aa549824cbea195caec80e23f13f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elevator is moving. The movement is decided by <a class="el" href="queue_8h.html#a05f4d4ebc3e0b18fc70f3902771cce28" title="Decides queue based on current_direction. If the direction is up, calls movement_up(), if direction is down, calls movement_down(). If the order is on current floor, stays on current floor, change state to Wait after set_timer(). ">queue_manager()</a>;. <br /></td></tr>
 <tr class="separator:a3046aa549824cbea195caec80e23f13f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab07834cb886c2a16e5e3b3e0c8b87e8f"><td class="memItemLeft" align="right" valign="top"><a id="ab07834cb886c2a16e5e3b3e0c8b87e8f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>state_run</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state_8h.html#ab07834cb886c2a16e5e3b3e0c8b87e8f">state_run</a> ()</td></tr>
+<tr class="memdesc:ab07834cb886c2a16e5e3b3e0c8b87e8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the state machine. The lights and orders are updated. The stop-button is checked. The chosen switch case is run. <br /></td></tr>
 <tr class="separator:ab07834cb886c2a16e5e3b3e0c8b87e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Library for the implementation of the State Machine. </p>
 
 <p class="definition">Definition in file <a class="el" href="state_8h_source.html">state.h</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a5d74787dedbc4e11c1ab15bf487e61f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d74787dedbc4e11c1ab15bf487e61f8">&#9670;&nbsp;</a></span>State</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="state_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum for the different states in the state machine. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8ad3fa9ae9431d6cb1772f9d9df48cab19"></a>Idle&#160;</td><td class="fielddoc"><p>Elevator is idle on a defined floor with the doors closed, waiting for new orders. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8ac3e0a98cb8e17fd822ecd3166b1a3119"></a>Move&#160;</td><td class="fielddoc"><p>Elevator moves, according to the queue. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a9779a7e9f14b8a5b1d7640a1ff0dab26"></a>Wait&#160;</td><td class="fielddoc"><p>The door closes after the timer is expired. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a3cd4c92c82b6251ce3c10eafa2012026"></a>StopFloor&#160;</td><td class="fielddoc"><p>The elevator stops on defined floor, if stop button is pushed. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a3ef1f303e67f0d5c573ed138d8a0b98e"></a>StopShaft&#160;</td><td class="fielddoc"><p>The elevator stops between floors, if stop button is pushed. </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="state_8h_source.html#l00019">19</a> of file <a class="el" href="state_8h_source.html">state.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a599325382f137e0a8fc50af96783d302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a599325382f137e0a8fc50af96783d302">&#9670;&nbsp;</a></span>set_current_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_current_state </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="state_8h.html#ae3081d55e54214abe932e6c511d6cac2">state</a>&#160;</td>
+          <td class="paramname"><em>new_state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the variable current_state = new_state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="state_8c_source.html#l00009">9</a> of file <a class="el" href="state_8c_source.html">state.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

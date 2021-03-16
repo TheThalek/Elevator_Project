@@ -1,7 +1,6 @@
 #include "orders.h"
 
 
-
 int orders[HARDWARE_NUMBER_OF_FLOORS][HARDWARE_NUMBER_OF_BUTTONS]; 
 
 HardwareOrder get_hardwareorder(int button) {

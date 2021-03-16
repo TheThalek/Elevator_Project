@@ -30,53 +30,112 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{state_8h_ae3081d55e54214abe932e6c511d6cac2}\label{state_8h_ae3081d55e54214abe932e6c511d6cac2}} 
-typedef enum State {\bfseries state}
-\end{DoxyCompactItemize}
+typedef enum \hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State} \hyperlink{state_8h_ae3081d55e54214abe932e6c511d6cac2}{state}
+\begin{DoxyCompactList}\small\item\em Enum for the different states in the state machine. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}\label{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}} 
-enum {\bfseries State} \{ \newline
-{\bfseries Idle}, 
-{\bfseries Move}, 
-{\bfseries Wait}, 
-{\bfseries Stop\+Floor}, 
+enum \hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State} \{ \newline
+\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8ad3fa9ae9431d6cb1772f9d9df48cab19}{Idle}, 
+\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8ac3e0a98cb8e17fd822ecd3166b1a3119}{Move}, 
+\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a9779a7e9f14b8a5b1d7640a1ff0dab26}{Wait}, 
+\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3cd4c92c82b6251ce3c10eafa2012026}{Stop\+Floor}, 
 \newline
-{\bfseries Stop\+Shaft}
- \}
+\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3ef1f303e67f0d5c573ed138d8a0b98e}{Stop\+Shaft}
+ \}\begin{DoxyCompactList}\small\item\em Enum for the different states in the state machine. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{state_8h_a599325382f137e0a8fc50af96783d302}\label{state_8h_a599325382f137e0a8fc50af96783d302}} 
-void {\bfseries set\+\_\+current\+\_\+state} (state new\+\_\+state)
-\item 
+void \hyperlink{state_8h_a599325382f137e0a8fc50af96783d302}{set\+\_\+current\+\_\+state} (\hyperlink{state_8h_ae3081d55e54214abe932e6c511d6cac2}{state} new\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Sets the variable current\+\_\+state = new\+\_\+state. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{state_8h_afcf4a6ddff16950f5c2792c5663ec1d7}\label{state_8h_afcf4a6ddff16950f5c2792c5663ec1d7}} 
-void {\bfseries state\+\_\+init} ()
-\item 
+void \hyperlink{state_8h_afcf4a6ddff16950f5c2792c5663ec1d7}{state\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em Initializes the elevator. If the elevator is in an undefined floor, when the program starts, it moves up until it reaches a defined floor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{state_8h_a2f805cf1725a80c15652562f8785e989}\label{state_8h_a2f805cf1725a80c15652562f8785e989}} 
-void {\bfseries read\+\_\+stop\+\_\+signal} ()
-\item 
+void \hyperlink{state_8h_a2f805cf1725a80c15652562f8785e989}{read\+\_\+stop\+\_\+signal} ()
+\begin{DoxyCompactList}\small\item\em Reads the stop-\/signal button and determines the new state. If current\+\_\+postion() is on undefined floor, current\+\_\+state = Stop\+Shaft. If current\+\_\+postion() is on defined floor, current\+\_\+state = Stop\+Floor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{state_8h_a2f042a2a46386e05be3f891b941edddd}\label{state_8h_a2f042a2a46386e05be3f891b941edddd}} 
-void {\bfseries state\+\_\+idle} ()
-\item 
+void \hyperlink{state_8h_a2f042a2a46386e05be3f891b941edddd}{state\+\_\+idle} ()
+\begin{DoxyCompactList}\small\item\em Elevator stands still on defined floor with doors closed, Continuously look for new orders. If new order, sets start direction, before changing the state to Move. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{state_8h_a05d3eebcf56bc02711aeb1c0cc0b138b}\label{state_8h_a05d3eebcf56bc02711aeb1c0cc0b138b}} 
-void {\bfseries state\+\_\+wait} ()
-\item 
+void \hyperlink{state_8h_a05d3eebcf56bc02711aeb1c0cc0b138b}{state\+\_\+wait} ()
+\begin{DoxyCompactList}\small\item\em Opens the door, when the timer expires, closes door. If obstruction signal is active, the door stays open. If the timer expires when the current\+\_\+direction = 0, the state goes to Idle. Otherwise it goes to Move. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{state_8h_ae28b26b5324f3539a339420edf3d4e5f}\label{state_8h_ae28b26b5324f3539a339420edf3d4e5f}} 
-void {\bfseries state\+\_\+stop\+\_\+floor} ()
-\item 
+void \hyperlink{state_8h_ae28b26b5324f3539a339420edf3d4e5f}{state\+\_\+stop\+\_\+floor} ()
+\begin{DoxyCompactList}\small\item\em Stop button is activated when the elevator is on defined floor. The stop light is turned on and the doors are opened. All pevious orders are cleared. When the stop-\/button is released the stop light turns off. The door closes after the timer is expired. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{state_8h_acfc94245b386b5517a8e2606a3bc4e35}\label{state_8h_acfc94245b386b5517a8e2606a3bc4e35}} 
-void {\bfseries state\+\_\+stop\+\_\+shaft} ()
-\item 
+void \hyperlink{state_8h_acfc94245b386b5517a8e2606a3bc4e35}{state\+\_\+stop\+\_\+shaft} ()
+\begin{DoxyCompactList}\small\item\em Stop button is activated when the elevator is on undefined floor. The stop light is turned on. All previous orders are cleared. When the stop-\/button is released the stop light turns off and the elevator stands still until a new order is placed. A new direction is chosen. New state = move. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{state_8h_a3046aa549824cbea195caec80e23f13f}\label{state_8h_a3046aa549824cbea195caec80e23f13f}} 
-void {\bfseries state\+\_\+move} ()
-\item 
+void \hyperlink{state_8h_a3046aa549824cbea195caec80e23f13f}{state\+\_\+move} ()
+\begin{DoxyCompactList}\small\item\em Elevator is moving. The movement is decided by \hyperlink{queue_8h_a05f4d4ebc3e0b18fc70f3902771cce28}{queue\+\_\+manager()};. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{state_8h_ab07834cb886c2a16e5e3b3e0c8b87e8f}\label{state_8h_ab07834cb886c2a16e5e3b3e0c8b87e8f}} 
-void {\bfseries state\+\_\+run} ()
-\end{DoxyCompactItemize}
+void \hyperlink{state_8h_ab07834cb886c2a16e5e3b3e0c8b87e8f}{state\+\_\+run} ()
+\begin{DoxyCompactList}\small\item\em Implementation of the state machine. The lights and orders are updated. The stop-\/button is checked. The chosen switch case is run. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Library for the implementation of the State Machine. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}\label{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}} 
+\index{state.\+h@{state.\+h}!State@{State}}
+\index{State@{State}!state.\+h@{state.\+h}}
+\subsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}
+
+
+
+Enum for the different states in the state machine. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Idle@{Idle}!state.\+h@{state.\+h}}\index{state.\+h@{state.\+h}!Idle@{Idle}}}\mbox{\Hypertarget{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8ad3fa9ae9431d6cb1772f9d9df48cab19}\label{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8ad3fa9ae9431d6cb1772f9d9df48cab19}} 
+Idle&Elevator is idle on a defined floor with the doors closed, waiting for new orders. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Move@{Move}!state.\+h@{state.\+h}}\index{state.\+h@{state.\+h}!Move@{Move}}}\mbox{\Hypertarget{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8ac3e0a98cb8e17fd822ecd3166b1a3119}\label{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8ac3e0a98cb8e17fd822ecd3166b1a3119}} 
+Move&Elevator moves, according to the queue. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Wait@{Wait}!state.\+h@{state.\+h}}\index{state.\+h@{state.\+h}!Wait@{Wait}}}\mbox{\Hypertarget{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a9779a7e9f14b8a5b1d7640a1ff0dab26}\label{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a9779a7e9f14b8a5b1d7640a1ff0dab26}} 
+Wait&The door closes after the timer is expired. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Stop\+Floor@{Stop\+Floor}!state.\+h@{state.\+h}}\index{state.\+h@{state.\+h}!Stop\+Floor@{Stop\+Floor}}}\mbox{\Hypertarget{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3cd4c92c82b6251ce3c10eafa2012026}\label{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3cd4c92c82b6251ce3c10eafa2012026}} 
+Stop\+Floor&The elevator stops on defined floor, if stop button is pushed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Stop\+Shaft@{Stop\+Shaft}!state.\+h@{state.\+h}}\index{state.\+h@{state.\+h}!Stop\+Shaft@{Stop\+Shaft}}}\mbox{\Hypertarget{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3ef1f303e67f0d5c573ed138d8a0b98e}\label{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3ef1f303e67f0d5c573ed138d8a0b98e}} 
+Stop\+Shaft&The elevator stops between floors, if stop button is pushed. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 19 of file state.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{state_8h_a599325382f137e0a8fc50af96783d302}\label{state_8h_a599325382f137e0a8fc50af96783d302}} 
+\index{state.\+h@{state.\+h}!set\+\_\+current\+\_\+state@{set\+\_\+current\+\_\+state}}
+\index{set\+\_\+current\+\_\+state@{set\+\_\+current\+\_\+state}!state.\+h@{state.\+h}}
+\subsubsection{\texorpdfstring{set\+\_\+current\+\_\+state()}{set\_current\_state()}}
+{\footnotesize\ttfamily void set\+\_\+current\+\_\+state (\begin{DoxyParamCaption}\item[{\hyperlink{state_8h_ae3081d55e54214abe932e6c511d6cac2}{state}}]{new\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+Sets the variable current\+\_\+state = new\+\_\+state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 9 of file state.\+c.
 

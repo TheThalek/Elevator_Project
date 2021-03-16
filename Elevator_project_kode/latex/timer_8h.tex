@@ -28,9 +28,9 @@ This graph shows which files directly or indirectly include this file\+:
 \item 
 \mbox{\Hypertarget{timer_8h_aaedac22c55880495505bf375e0e132c1}\label{timer_8h_aaedac22c55880495505bf375e0e132c1}} 
 void \hyperlink{timer_8h_aaedac22c55880495505bf375e0e132c1}{start\+\_\+timer} ()
-\begin{DoxyCompactList}\small\item\em Start timer. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Starts timer. Sets a variable equal to the current time, by calling the function time(\+N\+U\+L\+L). \end{DoxyCompactList}\item 
 bool \hyperlink{timer_8h_a7ea8455cf4db14c686ca6ac10e8f043b}{timer\+\_\+countdown} ()
-\begin{DoxyCompactList}\small\item\em Function that implements the 3 seconds countdown. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Implementation of the 3 seconds countdown. Checks if the difference between the current time and the start time is higher or lower than the time limit. If higher, it has reached the time limit and returns 1. If lower, returns 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -47,10 +47,10 @@ Implementation of timer on the elevator door.
 
 
 
-Function that implements the 3 seconds countdown. 
+Implementation of the 3 seconds countdown. Checks if the difference between the current time and the start time is higher or lower than the time limit. If higher, it has reached the time limit and returns 1. If lower, returns 0. 
 
 \begin{DoxyReturn}{Returns}
-countdown executed (0). countdown ongoing (1) 
+countdown executed (1). countdown ongoing (0) 
 \end{DoxyReturn}
 
 

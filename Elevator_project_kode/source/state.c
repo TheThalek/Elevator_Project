@@ -41,7 +41,6 @@ void read_stop_signal() {
 
 
 void state_idle() {
-    close_door();
     for(int floor = 0; floor < HARDWARE_NUMBER_OF_FLOORS; floor++) {
             if(check_order_floor(floor) == 1){
                 set_start_direction(floor);
@@ -52,6 +51,7 @@ void state_idle() {
 
 
 void state_wait() {
+    open_door();
     if(hardware_read_obstruction_signal() == 1) {
         start_timer();
     }

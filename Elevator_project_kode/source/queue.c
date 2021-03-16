@@ -84,7 +84,6 @@ void movement_up() {
                 hardware_command_movement(HARDWARE_MOVEMENT_STOP);
                 clear_orders_on_floor(current_position());
                 start_timer();
-                open_door();
                 set_current_state(Wait);
             }
         }
@@ -118,7 +117,6 @@ void movement_down() {
                 hardware_command_movement(HARDWARE_MOVEMENT_STOP);
                 clear_orders_on_floor(current_position());
                 start_timer();
-                open_door();
                 set_current_state(Wait);                  
             }
         }
@@ -131,7 +129,6 @@ void movement_down() {
             set_current_direction(1);
         }
         else if(check_order_above() == 0) {
-            open_door();
             set_current_state(Idle);
         } 
     }
@@ -147,7 +144,6 @@ void queue_manager() {
     }
     else if(get_current_direction() == 0) {
         start_timer();
-        open_door();
         set_current_state(Wait);
     }
 }

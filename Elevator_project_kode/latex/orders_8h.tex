@@ -32,40 +32,185 @@ This graph shows which files directly or indirectly include this file\+:
 \hyperlink{hardware_8h_a796a8de8ce0ae769d7dbd3327a7bdbe7}{Hardware\+Order} {\bfseries get\+\_\+hardwareorder} (int button)
 \item 
 \mbox{\Hypertarget{orders_8h_a061efad066833f37bb777acc0322e140}\label{orders_8h_a061efad066833f37bb777acc0322e140}} 
-void {\bfseries initialize\+\_\+order\+\_\+list} ()
-\item 
+void \hyperlink{orders_8h_a061efad066833f37bb777acc0322e140}{initialize\+\_\+order\+\_\+list} ()
+\begin{DoxyCompactList}\small\item\em Initializes the order-\/array, makes an empty array\+: orders\mbox{[}floor\mbox{]}\mbox{[}button\mbox{]}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{orders_8h_a04fb5ec6aa91c0a9aca9a62bd8f77dc7}\label{orders_8h_a04fb5ec6aa91c0a9aca9a62bd8f77dc7}} 
-void {\bfseries set\+\_\+orders} ()
-\item 
-\mbox{\Hypertarget{orders_8h_a197b5cc8b46cfde2a097c852b01d1c4b}\label{orders_8h_a197b5cc8b46cfde2a097c852b01d1c4b}} 
-int {\bfseries get\+\_\+order} (int floor, int button)
-\item 
-\mbox{\Hypertarget{orders_8h_a34eb2168d05d8b42d28ce98905a5976e}\label{orders_8h_a34eb2168d05d8b42d28ce98905a5976e}} 
-void {\bfseries clear\+\_\+orders\+\_\+on\+\_\+floor} (int floor)
-\item 
+void \hyperlink{orders_8h_a04fb5ec6aa91c0a9aca9a62bd8f77dc7}{set\+\_\+orders} ()
+\begin{DoxyCompactList}\small\item\em Iterates through all the buttons on the floor-\/panel. If a button is pushed, the corresponding place in the array will be set to active. \end{DoxyCompactList}\item 
+int \hyperlink{orders_8h_a197b5cc8b46cfde2a097c852b01d1c4b}{get\+\_\+order} (int floor, int button)
+\begin{DoxyCompactList}\small\item\em Returns the given value saved in the specified place in the orders-\/array. \end{DoxyCompactList}\item 
+void \hyperlink{orders_8h_a34eb2168d05d8b42d28ce98905a5976e}{clear\+\_\+orders\+\_\+on\+\_\+floor} (int floor)
+\begin{DoxyCompactList}\small\item\em Clears all order on a given floor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{orders_8h_a6206e5203639ca23d84820e2ffb108a3}\label{orders_8h_a6206e5203639ca23d84820e2ffb108a3}} 
-void {\bfseries clear\+\_\+all\+\_\+orders} ()
-\item 
-\mbox{\Hypertarget{orders_8h_a37c377d96551aaf01823c12ff475f215}\label{orders_8h_a37c377d96551aaf01823c12ff475f215}} 
-int {\bfseries check\+\_\+order\+\_\+floor} (int floor)
-\item 
-\mbox{\Hypertarget{orders_8h_afa04aae38011cd957102bb9da18d9907}\label{orders_8h_afa04aae38011cd957102bb9da18d9907}} 
-int {\bfseries check\+\_\+all\+\_\+order} ()
-\item 
-\mbox{\Hypertarget{orders_8h_ab4742330b65b88c1dd2e9942e295c3a1}\label{orders_8h_ab4742330b65b88c1dd2e9942e295c3a1}} 
-int {\bfseries check\+\_\+order\+\_\+above} ()
-\item 
-\mbox{\Hypertarget{orders_8h_a611521170cfe0b7438d01e2ab8269fee}\label{orders_8h_a611521170cfe0b7438d01e2ab8269fee}} 
-int {\bfseries check\+\_\+order\+\_\+below} ()
-\item 
-\mbox{\Hypertarget{orders_8h_acf6b7bcd3a2deb033e834cbc58fba3b1}\label{orders_8h_acf6b7bcd3a2deb033e834cbc58fba3b1}} 
-int {\bfseries check\+\_\+order\+\_\+below\+\_\+current\+\_\+floor} ()
-\item 
-\mbox{\Hypertarget{orders_8h_aa3961df9a9b23e57a65171091b3885f6}\label{orders_8h_aa3961df9a9b23e57a65171091b3885f6}} 
-int {\bfseries find\+\_\+floor\+\_\+with\+\_\+order} ()
-\end{DoxyCompactItemize}
+void \hyperlink{orders_8h_a6206e5203639ca23d84820e2ffb108a3}{clear\+\_\+all\+\_\+orders} ()
+\begin{DoxyCompactList}\small\item\em Clears all orders by iterating \hyperlink{orders_8h_a34eb2168d05d8b42d28ce98905a5976e}{clear\+\_\+orders\+\_\+on\+\_\+floor(int floor)} through all floors. \end{DoxyCompactList}\item 
+int \hyperlink{orders_8h_a37c377d96551aaf01823c12ff475f215}{check\+\_\+order\+\_\+floor} (int floor)
+\begin{DoxyCompactList}\small\item\em If floor != (-\/1), if the elevator is not in an undefined position, check if the there is an active order on the current floor. \end{DoxyCompactList}\item 
+int \hyperlink{orders_8h_afa04aae38011cd957102bb9da18d9907}{check\+\_\+all\+\_\+order} ()
+\begin{DoxyCompactList}\small\item\em Check for all active orders by iterating through all existing floors. For each iteration, checks if \hyperlink{orders_8h_a37c377d96551aaf01823c12ff475f215}{check\+\_\+order\+\_\+floor(int floor)} == 1. If true, return 1. False, return 0. \end{DoxyCompactList}\item 
+int \hyperlink{orders_8h_ab4742330b65b88c1dd2e9942e295c3a1}{check\+\_\+order\+\_\+above} ()
+\begin{DoxyCompactList}\small\item\em Check for all active orders above current floor by iterating between current floor and top floor. For each iteration, checks if \hyperlink{orders_8h_a37c377d96551aaf01823c12ff475f215}{check\+\_\+order\+\_\+floor(int floor)} == 1. If true, return 1. False, return 0. \end{DoxyCompactList}\item 
+int \hyperlink{orders_8h_a611521170cfe0b7438d01e2ab8269fee}{check\+\_\+order\+\_\+below} ()
+\begin{DoxyCompactList}\small\item\em Check for all active orders below current floor by iterating between ground floor and current floor. For each iteration, checks if \hyperlink{orders_8h_a37c377d96551aaf01823c12ff475f215}{check\+\_\+order\+\_\+floor(int floor)} == 1. If true, return 1. False, return 0. \end{DoxyCompactList}\item 
+int \hyperlink{orders_8h_acf6b7bcd3a2deb033e834cbc58fba3b1}{check\+\_\+order\+\_\+below\+\_\+current\+\_\+floor} ()
+\begin{DoxyCompactList}\small\item\em Check for all active orders below current floor by iterating between ground floor and the floor directly under the current floor. Used in \hyperlink{queue_8h_a8738e0662c2d336c7573829c9be0e44c}{check\+\_\+priority\+\_\+down()} in \hyperlink{queue_8c_source}{queue.\+c}. For each iteration, checks if \hyperlink{orders_8h_a37c377d96551aaf01823c12ff475f215}{check\+\_\+order\+\_\+floor(int floor)} == 1. If true, return 1. False, return 0. \end{DoxyCompactList}\item 
+int \hyperlink{orders_8h_aa3961df9a9b23e57a65171091b3885f6}{find\+\_\+floor\+\_\+with\+\_\+order} ()
+\begin{DoxyCompactList}\small\item\em Finds a floor with an active order. Uses \hyperlink{orders_8h_a37c377d96551aaf01823c12ff475f215}{check\+\_\+order\+\_\+floor(int floor)} by iterating through all floors, and returning the floor with an active order. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Implementation of management of orders. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{orders_8h_afa04aae38011cd957102bb9da18d9907}\label{orders_8h_afa04aae38011cd957102bb9da18d9907}} 
+\index{orders.\+h@{orders.\+h}!check\+\_\+all\+\_\+order@{check\+\_\+all\+\_\+order}}
+\index{check\+\_\+all\+\_\+order@{check\+\_\+all\+\_\+order}!orders.\+h@{orders.\+h}}
+\subsubsection{\texorpdfstring{check\+\_\+all\+\_\+order()}{check\_all\_order()}}
+{\footnotesize\ttfamily int check\+\_\+all\+\_\+order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check for all active orders by iterating through all existing floors. For each iteration, checks if \hyperlink{orders_8h_a37c377d96551aaf01823c12ff475f215}{check\+\_\+order\+\_\+floor(int floor)} == 1. If true, return 1. False, return 0. 
+
+\begin{DoxyReturn}{Returns}
+1, if there is an active order on any of the floors. 0, if there are no active orders. 
+\end{DoxyReturn}
+
+
+Definition at line 79 of file orders.\+c.
+
+\mbox{\Hypertarget{orders_8h_ab4742330b65b88c1dd2e9942e295c3a1}\label{orders_8h_ab4742330b65b88c1dd2e9942e295c3a1}} 
+\index{orders.\+h@{orders.\+h}!check\+\_\+order\+\_\+above@{check\+\_\+order\+\_\+above}}
+\index{check\+\_\+order\+\_\+above@{check\+\_\+order\+\_\+above}!orders.\+h@{orders.\+h}}
+\subsubsection{\texorpdfstring{check\+\_\+order\+\_\+above()}{check\_order\_above()}}
+{\footnotesize\ttfamily int check\+\_\+order\+\_\+above (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check for all active orders above current floor by iterating between current floor and top floor. For each iteration, checks if \hyperlink{orders_8h_a37c377d96551aaf01823c12ff475f215}{check\+\_\+order\+\_\+floor(int floor)} == 1. If true, return 1. False, return 0. 
+
+\begin{DoxyReturn}{Returns}
+1, if there is an active order on any of the floors above. 0, otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 90 of file orders.\+c.
+
+\mbox{\Hypertarget{orders_8h_a611521170cfe0b7438d01e2ab8269fee}\label{orders_8h_a611521170cfe0b7438d01e2ab8269fee}} 
+\index{orders.\+h@{orders.\+h}!check\+\_\+order\+\_\+below@{check\+\_\+order\+\_\+below}}
+\index{check\+\_\+order\+\_\+below@{check\+\_\+order\+\_\+below}!orders.\+h@{orders.\+h}}
+\subsubsection{\texorpdfstring{check\+\_\+order\+\_\+below()}{check\_order\_below()}}
+{\footnotesize\ttfamily int check\+\_\+order\+\_\+below (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check for all active orders below current floor by iterating between ground floor and current floor. For each iteration, checks if \hyperlink{orders_8h_a37c377d96551aaf01823c12ff475f215}{check\+\_\+order\+\_\+floor(int floor)} == 1. If true, return 1. False, return 0. 
+
+\begin{DoxyReturn}{Returns}
+1, if there is an active order on any of the floors below. 0, otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 100 of file orders.\+c.
+
+\mbox{\Hypertarget{orders_8h_acf6b7bcd3a2deb033e834cbc58fba3b1}\label{orders_8h_acf6b7bcd3a2deb033e834cbc58fba3b1}} 
+\index{orders.\+h@{orders.\+h}!check\+\_\+order\+\_\+below\+\_\+current\+\_\+floor@{check\+\_\+order\+\_\+below\+\_\+current\+\_\+floor}}
+\index{check\+\_\+order\+\_\+below\+\_\+current\+\_\+floor@{check\+\_\+order\+\_\+below\+\_\+current\+\_\+floor}!orders.\+h@{orders.\+h}}
+\subsubsection{\texorpdfstring{check\+\_\+order\+\_\+below\+\_\+current\+\_\+floor()}{check\_order\_below\_current\_floor()}}
+{\footnotesize\ttfamily int check\+\_\+order\+\_\+below\+\_\+current\+\_\+floor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check for all active orders below current floor by iterating between ground floor and the floor directly under the current floor. Used in \hyperlink{queue_8h_a8738e0662c2d336c7573829c9be0e44c}{check\+\_\+priority\+\_\+down()} in \hyperlink{queue_8c_source}{queue.\+c}. For each iteration, checks if \hyperlink{orders_8h_a37c377d96551aaf01823c12ff475f215}{check\+\_\+order\+\_\+floor(int floor)} == 1. If true, return 1. False, return 0. 
+
+\begin{DoxyReturn}{Returns}
+1, if there is an active order on any of the floors below. 0, otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 110 of file orders.\+c.
+
+\mbox{\Hypertarget{orders_8h_a37c377d96551aaf01823c12ff475f215}\label{orders_8h_a37c377d96551aaf01823c12ff475f215}} 
+\index{orders.\+h@{orders.\+h}!check\+\_\+order\+\_\+floor@{check\+\_\+order\+\_\+floor}}
+\index{check\+\_\+order\+\_\+floor@{check\+\_\+order\+\_\+floor}!orders.\+h@{orders.\+h}}
+\subsubsection{\texorpdfstring{check\+\_\+order\+\_\+floor()}{check\_order\_floor()}}
+{\footnotesize\ttfamily int check\+\_\+order\+\_\+floor (\begin{DoxyParamCaption}\item[{int}]{floor }\end{DoxyParamCaption})}
+
+
+
+If floor != (-\/1), if the elevator is not in an undefined position, check if the there is an active order on the current floor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em floor} & The current floor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0, if floor != (-\/1), or if there aren\textquotesingle{}t active orders on floor. 1, there is an active order on the current floor. 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file orders.\+c.
+
+\mbox{\Hypertarget{orders_8h_a34eb2168d05d8b42d28ce98905a5976e}\label{orders_8h_a34eb2168d05d8b42d28ce98905a5976e}} 
+\index{orders.\+h@{orders.\+h}!clear\+\_\+orders\+\_\+on\+\_\+floor@{clear\+\_\+orders\+\_\+on\+\_\+floor}}
+\index{clear\+\_\+orders\+\_\+on\+\_\+floor@{clear\+\_\+orders\+\_\+on\+\_\+floor}!orders.\+h@{orders.\+h}}
+\subsubsection{\texorpdfstring{clear\+\_\+orders\+\_\+on\+\_\+floor()}{clear\_orders\_on\_floor()}}
+{\footnotesize\ttfamily void clear\+\_\+orders\+\_\+on\+\_\+floor (\begin{DoxyParamCaption}\item[{int}]{floor }\end{DoxyParamCaption})}
+
+
+
+Clears all order on a given floor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em floor} & The specified floor. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file orders.\+c.
+
+\mbox{\Hypertarget{orders_8h_aa3961df9a9b23e57a65171091b3885f6}\label{orders_8h_aa3961df9a9b23e57a65171091b3885f6}} 
+\index{orders.\+h@{orders.\+h}!find\+\_\+floor\+\_\+with\+\_\+order@{find\+\_\+floor\+\_\+with\+\_\+order}}
+\index{find\+\_\+floor\+\_\+with\+\_\+order@{find\+\_\+floor\+\_\+with\+\_\+order}!orders.\+h@{orders.\+h}}
+\subsubsection{\texorpdfstring{find\+\_\+floor\+\_\+with\+\_\+order()}{find\_floor\_with\_order()}}
+{\footnotesize\ttfamily int find\+\_\+floor\+\_\+with\+\_\+order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Finds a floor with an active order. Uses \hyperlink{orders_8h_a37c377d96551aaf01823c12ff475f215}{check\+\_\+order\+\_\+floor(int floor)} by iterating through all floors, and returning the floor with an active order. 
+
+\begin{DoxyReturn}{Returns}
+the floor with an active order, 1 if invalid floor. 
+\end{DoxyReturn}
+
+
+Definition at line 122 of file orders.\+c.
+
+\mbox{\Hypertarget{orders_8h_a197b5cc8b46cfde2a097c852b01d1c4b}\label{orders_8h_a197b5cc8b46cfde2a097c852b01d1c4b}} 
+\index{orders.\+h@{orders.\+h}!get\+\_\+order@{get\+\_\+order}}
+\index{get\+\_\+order@{get\+\_\+order}!orders.\+h@{orders.\+h}}
+\subsubsection{\texorpdfstring{get\+\_\+order()}{get\_order()}}
+{\footnotesize\ttfamily int get\+\_\+order (\begin{DoxyParamCaption}\item[{int}]{floor,  }\item[{int}]{button }\end{DoxyParamCaption})}
+
+
+
+Returns the given value saved in the specified place in the orders-\/array. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em floor} & The specified floor \\
+\hline
+\mbox{\tt in}  & {\em button} & The specified order-\/button\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+orders\mbox{[}floor\mbox{]}\mbox{[}button\mbox{]}, which is 1 if it has an active order, 0 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file orders.\+c.
 

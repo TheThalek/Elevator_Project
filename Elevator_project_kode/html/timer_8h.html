@@ -104,10 +104,10 @@ This graph shows which files directly or indirectly include this file:</div>
 Functions</h2></td></tr>
 <tr class="memitem:aaedac22c55880495505bf375e0e132c1"><td class="memItemLeft" align="right" valign="top"><a id="aaedac22c55880495505bf375e0e132c1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8h.html#aaedac22c55880495505bf375e0e132c1">start_timer</a> ()</td></tr>
-<tr class="memdesc:aaedac22c55880495505bf375e0e132c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start timer. <br /></td></tr>
+<tr class="memdesc:aaedac22c55880495505bf375e0e132c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts timer. Sets a variable equal to the current time, by calling the function time(NULL). <br /></td></tr>
 <tr class="separator:aaedac22c55880495505bf375e0e132c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ea8455cf4db14c686ca6ac10e8f043b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8h.html#a7ea8455cf4db14c686ca6ac10e8f043b">timer_countdown</a> ()</td></tr>
-<tr class="memdesc:a7ea8455cf4db14c686ca6ac10e8f043b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that implements the 3 seconds countdown.  <a href="#a7ea8455cf4db14c686ca6ac10e8f043b">More...</a><br /></td></tr>
+<tr class="memdesc:a7ea8455cf4db14c686ca6ac10e8f043b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the 3 seconds countdown. Checks if the difference between the current time and the start time is higher or lower than the time limit. If higher, it has reached the time limit and returns 1. If lower, returns 0.  <a href="#a7ea8455cf4db14c686ca6ac10e8f043b">More...</a><br /></td></tr>
 <tr class="separator:a7ea8455cf4db14c686ca6ac10e8f043b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -130,8 +130,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time
       </table>
 </div><div class="memdoc">
 
-<p>Function that implements the 3 seconds countdown. </p>
-<dl class="section return"><dt>Returns</dt><dd>countdown executed (0). countdown ongoing (1) </dd></dl>
+<p>Implementation of the 3 seconds countdown. Checks if the difference between the current time and the start time is higher or lower than the time limit. If higher, it has reached the time limit and returns 1. If lower, returns 0. </p>
+<dl class="section return"><dt>Returns</dt><dd>countdown executed (1). countdown ongoing (0) </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="timer_8c_source.html#l00012">12</a> of file <a class="el" href="timer_8c_source.html">timer.c</a>.</p>
 
