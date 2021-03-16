@@ -1,12 +1,9 @@
-#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <signal.h>
 #include "hardware.h"
 #include "state.h"
-#include "queue.h"
-#include "timer.h"
-#include "orders.h"
+
 
 
 int main() {

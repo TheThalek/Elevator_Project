@@ -1,0 +1,7 @@
+<map id="source/orders.h" name="source/orders.h">
+<area shape="rect" id="node3" href="$hardware_8h.html" title="Driver for the elevator hardware. " alt="" coords="82,229,168,256"/>
+<area shape="rect" id="node4" href="$queue_8h.html" title="Library for the implementation of queue. " alt="" coords="174,80,242,107"/>
+<area shape="rect" id="node9" href="$lights_8h.html" title="A library for doing operations on the lights on the floor&#45;panel. " alt="" coords="21,80,85,107"/>
+<area shape="rect" id="node6" href="$state_8h.html" title="Library for the implementation of the State Machine. " alt="" coords="278,155,340,181"/>
+<area shape="rect" id="node7" href="$timer_8h.html" title="Implementation of timer on the elevator door. " alt="" coords="278,229,340,256"/>
+</map>

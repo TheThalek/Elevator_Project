@@ -1,0 +1,12 @@
+<map id="source/timer.h" name="source/timer.h">
+<area shape="rect" id="node2" href="$state_8h.html" title="Library for the implementation of the State Machine. " alt="" coords="208,80,313,107"/>
+<area shape="rect" id="node11" href="$timer_8c_source.html" title="source/timer.c" alt="" coords="337,80,443,107"/>
+<area shape="rect" id="node3" href="$queue_8h.html" title="Library for the implementation of queue. " alt="" coords="73,155,184,181"/>
+<area shape="rect" id="node9" href="$main_8c_source.html" title="source/main.c" alt="" coords="209,155,313,181"/>
+<area shape="rect" id="node10" href="$state_8c_source.html" title="source/state.c" alt="" coords="337,155,443,181"/>
+<area shape="rect" id="node4" href="$orders_8h.html" title="Implementation of management of orders. " alt="" coords="141,229,253,256"/>
+<area shape="rect" id="node8" href="$queue_8c_source.html" title="source/queue.c" alt="" coords="5,229,116,256"/>
+<area shape="rect" id="node5" href="$lights_8h.html" title="A library for doing operations on the lights on the floor&#45;panel. " alt="" coords="143,304,250,331"/>
+<area shape="rect" id="node7" href="$orders_8c_source.html" title="source/orders.c" alt="" coords="274,304,386,331"/>
+<area shape="rect" id="node6" href="$lights_8c_source.html" title="source/lights.c" alt="" coords="143,379,250,405"/>
+</map>

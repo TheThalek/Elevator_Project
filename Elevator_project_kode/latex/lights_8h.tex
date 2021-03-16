@@ -1,0 +1,75 @@
+\hypertarget{lights_8h}{}\section{source/lights.h File Reference}
+\label{lights_8h}\index{source/lights.\+h@{source/lights.\+h}}
+
+
+A library for doing operations on the lights on the floor-\/panel.  
+
+
+{\ttfamily \#include \char`\"{}hardware.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}orders.\+h\char`\"{}}\newline
+Include dependency graph for lights.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{lights_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lights_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{lights_8h_ac3cbb05034ff71c26f5b7eab1df24dbf}\label{lights_8h_ac3cbb05034ff71c26f5b7eab1df24dbf}} 
+void \hyperlink{lights_8h_ac3cbb05034ff71c26f5b7eab1df24dbf}{set\+\_\+order\+\_\+lights} ()
+\begin{DoxyCompactList}\small\item\em Iterates through all the order-\/buttons. If an order button is active, which we check by using the \hyperlink{hardware_8h_a87917f3aa093fb46ca821a400d011ee8}{hardware\+\_\+read\+\_\+order()} from \hyperlink{hardware_8h}{hardware.\+h}, the funtion will turn the light on in said button. \end{DoxyCompactList}\item 
+void \hyperlink{lights_8h_a137498fd9fbbecf25ac39e9911fc07fe}{clear\+\_\+order\+\_\+lights} (int floor)
+\begin{DoxyCompactList}\small\item\em Deactivate order lights on the floor specified in the parameter, by iterating through the order-\/buttons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{lights_8h_afd77151474c3e94d7c52fd75413ae3ca}\label{lights_8h_afd77151474c3e94d7c52fd75413ae3ca}} 
+void \hyperlink{lights_8h_afd77151474c3e94d7c52fd75413ae3ca}{clear\+\_\+all\+\_\+order\+\_\+lights} ()
+\begin{DoxyCompactList}\small\item\em By using clear\+\_\+order\+\_\+lights, this function iterates though all possible floors, deactivating the lights on all order-\/buttons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{lights_8h_ad61c6d8a7c11e4adf676c586f5391571}\label{lights_8h_ad61c6d8a7c11e4adf676c586f5391571}} 
+void \hyperlink{lights_8h_ad61c6d8a7c11e4adf676c586f5391571}{on\+\_\+stop\+\_\+light} ()
+\begin{DoxyCompactList}\small\item\em Activates the stop light, by calling hardware\+\_\+command\+\_\+stop\+\_\+light(1) from \hyperlink{hardware_8h}{hardware.\+h}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{lights_8h_a3b782c92ff52ddc357009fad24931271}\label{lights_8h_a3b782c92ff52ddc357009fad24931271}} 
+void \hyperlink{lights_8h_a3b782c92ff52ddc357009fad24931271}{off\+\_\+stop\+\_\+light} ()
+\begin{DoxyCompactList}\small\item\em Deactivates the stop light, by calling hardware\+\_\+command\+\_\+stop\+\_\+light(0) from \hyperlink{hardware_8h}{hardware.\+h}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{lights_8h_a423745a554b7b74fd8a6ee276f3ee4f6}\label{lights_8h_a423745a554b7b74fd8a6ee276f3ee4f6}} 
+void \hyperlink{lights_8h_a423745a554b7b74fd8a6ee276f3ee4f6}{open\+\_\+door} ()
+\begin{DoxyCompactList}\small\item\em Activates the door light, by calling hardware\+\_\+command\+\_\+door\+\_\+open(1) from \hyperlink{hardware_8h}{hardware.\+h}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{lights_8h_a7e9a332d026a32072d6080c2f1264813}\label{lights_8h_a7e9a332d026a32072d6080c2f1264813}} 
+void \hyperlink{lights_8h_a7e9a332d026a32072d6080c2f1264813}{close\+\_\+door} ()
+\begin{DoxyCompactList}\small\item\em Deactivates the door light, by calling hardware\+\_\+command\+\_\+door\+\_\+open(0) from \hyperlink{hardware_8h}{hardware.\+h}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A library for doing operations on the lights on the floor-\/panel. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{lights_8h_a137498fd9fbbecf25ac39e9911fc07fe}\label{lights_8h_a137498fd9fbbecf25ac39e9911fc07fe}} 
+\index{lights.\+h@{lights.\+h}!clear\+\_\+order\+\_\+lights@{clear\+\_\+order\+\_\+lights}}
+\index{clear\+\_\+order\+\_\+lights@{clear\+\_\+order\+\_\+lights}!lights.\+h@{lights.\+h}}
+\subsubsection{\texorpdfstring{clear\+\_\+order\+\_\+lights()}{clear\_order\_lights()}}
+{\footnotesize\ttfamily void clear\+\_\+order\+\_\+lights (\begin{DoxyParamCaption}\item[{int}]{floor }\end{DoxyParamCaption})}
+
+
+
+Deactivate order lights on the floor specified in the parameter, by iterating through the order-\/buttons. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em floor} & The given floor that will have it\textquotesingle{}s order-\/buttons lights deactivated. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file lights.\+c.
+

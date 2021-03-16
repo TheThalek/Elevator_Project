@@ -1,0 +1,11 @@
+<map id="source/hardware.h" name="source/hardware.h">
+<area shape="rect" id="node2" href="$lights_8h.html" title="A library for doing operations on the lights on the floor&#45;panel. " alt="" coords="146,80,253,107"/>
+<area shape="rect" id="node4" href="$orders_8h.html" title="Implementation of management of orders. " alt="" coords="167,155,279,181"/>
+<area shape="rect" id="node5" href="$queue_8h.html" title="Library for the implementation of queue. " alt="" coords="5,229,116,256"/>
+<area shape="rect" id="node6" href="$state_8h.html" title="Library for the implementation of the State Machine. " alt="" coords="224,304,329,331"/>
+<area shape="rect" id="node7" href="$main_8c_source.html" title="source/main.c" alt="" coords="339,379,443,405"/>
+<area shape="rect" id="node3" href="$lights_8c_source.html" title="source/lights.c" alt="" coords="37,155,143,181"/>
+<area shape="rect" id="node10" href="$orders_8c_source.html" title="source/orders.c" alt="" coords="141,229,253,256"/>
+<area shape="rect" id="node9" href="$queue_8c_source.html" title="source/queue.c" alt="" coords="5,304,116,331"/>
+<area shape="rect" id="node8" href="$state_8c_source.html" title="source/state.c" alt="" coords="209,379,315,405"/>
+</map>

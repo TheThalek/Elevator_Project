@@ -1,0 +1,71 @@
+\hypertarget{orders_8h}{}\section{source/orders.h File Reference}
+\label{orders_8h}\index{source/orders.\+h@{source/orders.\+h}}
+
+
+Implementation of management of orders.  
+
+
+{\ttfamily \#include \char`\"{}stdbool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hardware.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lights.\+h\char`\"{}}\newline
+Include dependency graph for orders.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{orders_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{orders_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{orders_8h_abc9f9064a2a12b6206c222bb3191b38e}\label{orders_8h_abc9f9064a2a12b6206c222bb3191b38e}} 
+\hyperlink{hardware_8h_a796a8de8ce0ae769d7dbd3327a7bdbe7}{Hardware\+Order} {\bfseries get\+\_\+hardwareorder} (int button)
+\item 
+\mbox{\Hypertarget{orders_8h_a061efad066833f37bb777acc0322e140}\label{orders_8h_a061efad066833f37bb777acc0322e140}} 
+void {\bfseries initialize\+\_\+order\+\_\+list} ()
+\item 
+\mbox{\Hypertarget{orders_8h_a04fb5ec6aa91c0a9aca9a62bd8f77dc7}\label{orders_8h_a04fb5ec6aa91c0a9aca9a62bd8f77dc7}} 
+void {\bfseries set\+\_\+orders} ()
+\item 
+\mbox{\Hypertarget{orders_8h_a197b5cc8b46cfde2a097c852b01d1c4b}\label{orders_8h_a197b5cc8b46cfde2a097c852b01d1c4b}} 
+int {\bfseries get\+\_\+order} (int floor, int button)
+\item 
+\mbox{\Hypertarget{orders_8h_a34eb2168d05d8b42d28ce98905a5976e}\label{orders_8h_a34eb2168d05d8b42d28ce98905a5976e}} 
+void {\bfseries clear\+\_\+orders\+\_\+on\+\_\+floor} (int floor)
+\item 
+\mbox{\Hypertarget{orders_8h_a6206e5203639ca23d84820e2ffb108a3}\label{orders_8h_a6206e5203639ca23d84820e2ffb108a3}} 
+void {\bfseries clear\+\_\+all\+\_\+orders} ()
+\item 
+\mbox{\Hypertarget{orders_8h_a37c377d96551aaf01823c12ff475f215}\label{orders_8h_a37c377d96551aaf01823c12ff475f215}} 
+int {\bfseries check\+\_\+order\+\_\+floor} (int floor)
+\item 
+\mbox{\Hypertarget{orders_8h_afa04aae38011cd957102bb9da18d9907}\label{orders_8h_afa04aae38011cd957102bb9da18d9907}} 
+int {\bfseries check\+\_\+all\+\_\+order} ()
+\item 
+\mbox{\Hypertarget{orders_8h_ab4742330b65b88c1dd2e9942e295c3a1}\label{orders_8h_ab4742330b65b88c1dd2e9942e295c3a1}} 
+int {\bfseries check\+\_\+order\+\_\+above} ()
+\item 
+\mbox{\Hypertarget{orders_8h_a611521170cfe0b7438d01e2ab8269fee}\label{orders_8h_a611521170cfe0b7438d01e2ab8269fee}} 
+int {\bfseries check\+\_\+order\+\_\+below} ()
+\item 
+\mbox{\Hypertarget{orders_8h_acf6b7bcd3a2deb033e834cbc58fba3b1}\label{orders_8h_acf6b7bcd3a2deb033e834cbc58fba3b1}} 
+int {\bfseries check\+\_\+order\+\_\+below\+\_\+current\+\_\+floor} ()
+\item 
+\mbox{\Hypertarget{orders_8h_aa3961df9a9b23e57a65171091b3885f6}\label{orders_8h_aa3961df9a9b23e57a65171091b3885f6}} 
+int {\bfseries find\+\_\+floor\+\_\+with\+\_\+order} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of management of orders. 
+

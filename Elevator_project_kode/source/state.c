@@ -5,9 +5,10 @@
 
 static inline state current_state = Idle;
 
-//Lagrer siste posisjon (global variabel) Skal kunne endres i både states og queue
-//Lagrer retning (global variabel) Skal kunne endres i både states og queue
 
+void set_current_state(state new_state) {
+    current_state = new_state;
+}
 
 
 void state_init() {
@@ -25,6 +26,20 @@ void state_init() {
     clear_all_order_lights();
 };
 
+
+void read_stop_signal() {
+        if (hardware_read_stop_signal()){
+            hardware_command_movement (HARDWARE_MOVEMENT_STOP);
+        if (current_position() == (-1)){
+            current_state = StopShaft;
+        }
+        else {
+            current_state = StopFloor;
+        }
+    }
+}
+
+
 void state_idle() {
     close_door();
     for(int floor = 0; floor < HARDWARE_NUMBER_OF_FLOORS; floor++) {
@@ -40,25 +55,18 @@ void state_wait() {
     if(hardware_read_obstruction_signal() == 1) {
         start_timer();
     }
-
-    //Hvis obstruksjon, hold døra åpen
-    //Når obstruksjon blir sluppet, start_timer();
-    if (get_current_direction() == 0){
-        if (timer_countdown() == 1) {
-            clear_orders_on_floor(current_position());
+    if(timer_countdown() == 1) {
+        if(get_current_direction() == 0) {
             close_door();
+            clear_orders_on_floor(current_position());
             current_state = Idle;
         }
-    }
-    else {
-        if (timer_countdown() == 1) {
+        else {
             close_door();
             current_state = Move;
         }
     }
 }
-
-
 
 
 void state_stop_floor() {
@@ -71,12 +79,9 @@ void state_stop_floor() {
     }
     off_stop_light();
     start_timer();   
-    set_direction(0);
+    set_current_direction(0);
     current_state = Wait;
 }
-
-
-
 
 
 void state_stop_shaft(){
@@ -90,97 +95,19 @@ void state_stop_shaft(){
     while(check_all_order() == 0) {
         set_orders();
         set_order_lights();
-        printf("I am checking orders\n");
         if (hardware_read_stop_signal()){
             current_state = StopShaft;
             break;
         }
     }
-    set_direction(find_direction_when_stop());
+    set_current_direction(find_direction_when_stop());
     current_state = Move;
 }
 
 
-
-
-
-
-
 void state_move() {
-    if(get_current_direction() == 1) {
-        if(check_order_above() == 1) {
-            if(check_order_floor(current_position()) == 1) {
-                if((get_order(current_position(), 2)) && ((check_order_above() == 1)) && ((get_order(current_position(), 1) == 0) && (get_order(current_position(), 0) == 0))) {
-                    hardware_command_movement(HARDWARE_MOVEMENT_UP);
-                }
-                else {
-                    hardware_command_movement(HARDWARE_MOVEMENT_STOP);
-                    clear_orders_on_floor(current_position());
-                    start_timer();
-                    open_door();
-                    current_state = Wait;
-                }
-            }
-            else if (check_order_floor(current_position()) == 0) {
-                hardware_command_movement(HARDWARE_MOVEMENT_UP);
-            }
-        }
-        else if(check_order_above() == 0) {
-            if(check_order_below() == 1) {
-                set_direction(-1);
-            }
-            else if(check_order_below() == 0) {
-                current_state = Idle;
-            } 
-        }
-    }
-
-    else if(get_current_direction() == (-1)) {
-        if(check_order_below() == 1) {
-            if(check_order_floor(current_position()) == 1) {
-                if((get_order(current_position(), 0)) && ((check_order_below_except_current_floor() == 1)) && ((get_order(current_position(), 1) == 0) && (get_order(current_position(), 2) == 0))) {
-                    hardware_command_movement(HARDWARE_MOVEMENT_DOWN);
-                }
-                else{
-                hardware_command_movement(HARDWARE_MOVEMENT_STOP);
-                printf("Stopper, fordi jeg er i rett etasje \n");
-                clear_orders_on_floor(current_position());
-                start_timer();
-                open_door();
-                current_state = Wait;                    
-                }
-            }
-            else if (check_order_floor(current_position()) == 0) {
-                hardware_command_movement(HARDWARE_MOVEMENT_DOWN);
-            }
-            
-        }
-        else if(check_order_below() == 0) {
-            if(check_order_above() == 1) {
-                printf("I think I am going in the wrong direction AND I AM STUPID FOR THINKING SO \n");
-                set_direction(1);
-            }
-            else if(check_order_above() == 0) {
-                open_door();
-                printf("STUPID \n");
-                current_state = Idle;
-            } 
-        }
-    }
-
-
-    else if (get_current_direction() == 0) {
-        start_timer();
-        open_door();
-        current_state = Wait;
-    }
+    queue_manager();
 }
-
-
-
-
-
-
 
 
 void state_run() {
@@ -188,16 +115,7 @@ void state_run() {
         set_orders(); 
         set_order_lights();
         set_last_position();
-        if (hardware_read_stop_signal()){
-            hardware_command_movement (HARDWARE_MOVEMENT_STOP);
-            if (current_position() == (-1)){
-                current_state = StopShaft;
-            }
-            else {
-                current_state = StopFloor;
-            }
-        }
-
+        read_stop_signal();
 
         switch(current_state) {
             case(Idle):{

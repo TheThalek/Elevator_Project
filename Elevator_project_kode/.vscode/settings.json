@@ -3,6 +3,7 @@
         "time.h": "c",
         "queue.h": "c",
         "state.h": "c",
-        "orders.h": "c"
+        "orders.h": "c",
+        "stdio.h": "c"
     }
 }

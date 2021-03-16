@@ -1,0 +1,82 @@
+\hypertarget{state_8h}{}\section{source/state.h File Reference}
+\label{state_8h}\index{source/state.\+h@{source/state.\+h}}
+
+
+Library for the implementation of the State Machine.  
+
+
+{\ttfamily \#include \char`\"{}hardware.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}orders.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for state.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{state_8h_ae3081d55e54214abe932e6c511d6cac2}\label{state_8h_ae3081d55e54214abe932e6c511d6cac2}} 
+typedef enum State {\bfseries state}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}\label{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}} 
+enum {\bfseries State} \{ \newline
+{\bfseries Idle}, 
+{\bfseries Move}, 
+{\bfseries Wait}, 
+{\bfseries Stop\+Floor}, 
+\newline
+{\bfseries Stop\+Shaft}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{state_8h_a599325382f137e0a8fc50af96783d302}\label{state_8h_a599325382f137e0a8fc50af96783d302}} 
+void {\bfseries set\+\_\+current\+\_\+state} (state new\+\_\+state)
+\item 
+\mbox{\Hypertarget{state_8h_afcf4a6ddff16950f5c2792c5663ec1d7}\label{state_8h_afcf4a6ddff16950f5c2792c5663ec1d7}} 
+void {\bfseries state\+\_\+init} ()
+\item 
+\mbox{\Hypertarget{state_8h_a2f805cf1725a80c15652562f8785e989}\label{state_8h_a2f805cf1725a80c15652562f8785e989}} 
+void {\bfseries read\+\_\+stop\+\_\+signal} ()
+\item 
+\mbox{\Hypertarget{state_8h_a2f042a2a46386e05be3f891b941edddd}\label{state_8h_a2f042a2a46386e05be3f891b941edddd}} 
+void {\bfseries state\+\_\+idle} ()
+\item 
+\mbox{\Hypertarget{state_8h_a05d3eebcf56bc02711aeb1c0cc0b138b}\label{state_8h_a05d3eebcf56bc02711aeb1c0cc0b138b}} 
+void {\bfseries state\+\_\+wait} ()
+\item 
+\mbox{\Hypertarget{state_8h_ae28b26b5324f3539a339420edf3d4e5f}\label{state_8h_ae28b26b5324f3539a339420edf3d4e5f}} 
+void {\bfseries state\+\_\+stop\+\_\+floor} ()
+\item 
+\mbox{\Hypertarget{state_8h_acfc94245b386b5517a8e2606a3bc4e35}\label{state_8h_acfc94245b386b5517a8e2606a3bc4e35}} 
+void {\bfseries state\+\_\+stop\+\_\+shaft} ()
+\item 
+\mbox{\Hypertarget{state_8h_a3046aa549824cbea195caec80e23f13f}\label{state_8h_a3046aa549824cbea195caec80e23f13f}} 
+void {\bfseries state\+\_\+move} ()
+\item 
+\mbox{\Hypertarget{state_8h_ab07834cb886c2a16e5e3b3e0c8b87e8f}\label{state_8h_ab07834cb886c2a16e5e3b3e0c8b87e8f}} 
+void {\bfseries state\+\_\+run} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Library for the implementation of the State Machine. 
+
